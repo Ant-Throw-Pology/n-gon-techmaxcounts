@@ -434,7 +434,7 @@ const simulation = {
                     text += tech.tech[i].nameInfo
                     tech.tech[i].addNameInfo();
                 }
-                if (tech.tech[i].count > 1) text += ` (${tech.tech[i].count}x)`
+                text += (tech.tech[i].count > 1) ? ` (${tech.tech[i].count}/${tech.tech[i].maxCount})` : ` (${tech.tech[i].maxCount})`;
             }
         }
         document.getElementById("tech").innerHTML = text
