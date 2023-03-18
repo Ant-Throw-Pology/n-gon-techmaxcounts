@@ -734,7 +734,7 @@ const powerUps = {
         ${m.fieldUpgrades[choose].description}</div></div>`
     },
     techText(choose, click) {
-        const techCountText = tech.tech[choose].count > 0 ? `(${tech.tech[choose].count+1}x)` : "";
+        const techCountText = tech.tech[choose].count > 0 ? `(${tech.tech[choose].count+1}/${tech.tech[choose].maxCount})` : `(${tech.tech[choose].maxCount})`;
         const style = localSettings.isHideImages || tech.tech[choose].isLore ? powerUps.hideStyle : `style="background-image: url('img/${tech.tech[choose].name}.webp');"`
         return `<div class="choose-grid-module card-background" onclick="${click}" onauxclick="${click}"${style}>
                 <div class="card-text">
@@ -742,7 +742,7 @@ const powerUps = {
                 ${tech.tech[choose].descriptionFunction ? tech.tech[choose].descriptionFunction() : tech.tech[choose].description}</div></div>`
     },
     skinTechText(choose, click) {
-        const techCountText = tech.tech[choose].count > 0 ? `(${tech.tech[choose].count+1}x)` : "";
+        const techCountText = tech.tech[choose].count > 0 ? `(${tech.tech[choose].count+1}/${tech.tech[choose].maxCount})` : `(${tech.tech[choose].maxCount})`;
         const style = localSettings.isHideImages ? powerUps.hideStyle : `style="background-image: url('img/${tech.tech[choose].name}.webp');"`
         return `<div class="choose-grid-module card-background" onclick="${click}" onauxclick="${click}"${style}>
                 <div class="card-text">
@@ -755,7 +755,7 @@ const powerUps = {
                 ${tech.tech[choose].descriptionFunction ? tech.tech[choose].descriptionFunction() : tech.tech[choose].description}</div></div>`
     },
     fieldTechText(choose, click) {
-        const techCountText = tech.tech[choose].count > 0 ? `(${tech.tech[choose].count+1}x)` : "";
+        const techCountText = tech.tech[choose].count > 0 ? `(${tech.tech[choose].count+1}/${tech.tech[choose].maxCount})` : `(${tech.tech[choose].maxCount})`;
         const style = localSettings.isHideImages ? powerUps.hideStyle : `style="background-image: url('img/${tech.tech[choose].name}.webp');"`
         return `<div class="choose-grid-module card-background" onclick="${click}" onauxclick="${click}"${style}>
                 <div class="card-text">
@@ -768,7 +768,7 @@ const powerUps = {
                 ${tech.tech[choose].descriptionFunction ? tech.tech[choose].descriptionFunction() : tech.tech[choose].description}</div></div>`
     },
     gunTechText(choose, click) {
-        const techCountText = tech.tech[choose].count > 0 ? `(${tech.tech[choose].count+1}x)` : "";
+        const techCountText = tech.tech[choose].count > 0 ? `(${tech.tech[choose].count+1}/${tech.tech[choose].maxCount})` : `(${tech.tech[choose].maxCount})`;
         const style = localSettings.isHideImages ? powerUps.hideStyle : `style="background-image: url('img/${tech.tech[choose].name}.webp');"`
         return `<div class="choose-grid-module card-background" onclick="${click}" onauxclick="${click}"${style}>
                 <div class="card-text">
@@ -781,7 +781,7 @@ const powerUps = {
                 ${tech.tech[choose].descriptionFunction ? tech.tech[choose].descriptionFunction() : tech.tech[choose].description}</div></div>`
     },
     junkTechText(choose, click) {
-        const techCountText = tech.tech[choose].count > 0 ? `(${tech.tech[choose].count+1}x)` : "";
+        const techCountText = tech.tech[choose].count > 0 ? `(${tech.tech[choose].count+1}/${tech.tech[choose].maxCount})` : `(${tech.tech[choose].maxCount})`;
         const style = localSettings.isHideImages ? powerUps.hideStyle : `style="background-size: contain;background-repeat: no-repeat;background-image: url('img/junk.webp');"`
         if (!localSettings.isHideImages) {
             setTimeout(() => { //delay so that the html element exists
