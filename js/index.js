@@ -477,7 +477,7 @@ ${simulation.isCheating ? "<br><br><em>lore disabled</em>": ""}
     isExperimentRun: false,
     techText(i) {
         return `<div class="card-text" >
-        <div class="grid-title" ><div class="circle-grid tech"></div> &nbsp; ${build.nameLink(tech.tech[i].name)} ${tech.tech[i].count > 1 ? `(${tech.tech[i].count}x)` : ""}</div>
+        <div class="grid-title" ><div class="circle-grid tech"></div> &nbsp; ${build.nameLink(tech.tech[i].name)} ${tech.tech[i].count > 1 ? `(${tech.tech[i].count}/${tech.tech[i].maxCount})` : `(${tech.tech[i].maxCount})`}</div>
         ${tech.tech[i].descriptionFunction ? tech.tech[i].descriptionFunction() :tech.tech[i].description}</div>`
     },
     skinTechText(i) {
@@ -485,7 +485,7 @@ ${simulation.isCheating ? "<br><br><em>lore disabled</em>": ""}
         <span style="position:relative;">
             <div class="circle-grid-skin"></div>
             <div class="circle-grid-skin-eye"></div>
-        </span> &nbsp; &nbsp; &nbsp;&nbsp; ${build.nameLink(tech.tech[i].name)} ${tech.tech[i].count > 1 ? `(${tech.tech[i].count}x)` : ""}</div>
+        </span> &nbsp; &nbsp; &nbsp;&nbsp; ${build.nameLink(tech.tech[i].name)} ${tech.tech[i].count > 1 ? `(${tech.tech[i].count}/${tech.tech[i].maxCount})` : `(${tech.tech[i].maxCount})`}</div>
         ${tech.tech[i].descriptionFunction ? tech.tech[i].descriptionFunction() :tech.tech[i].description}</div>`
     },
     gunTechText(i) {
@@ -493,7 +493,7 @@ ${simulation.isCheating ? "<br><br><em>lore disabled</em>": ""}
         <span style="position:relative;">
             <div class="circle-grid tech" style="position:absolute; top:0; left:0;opacity:0.8;"></div>
             <div class="circle-grid gun" style="position:absolute; top:0; left:10px; opacity:0.65;"></div>
-        </span> &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; ${build.nameLink(tech.tech[i].name)} ${tech.tech[i].count > 1 ? `(${tech.tech[i].count}x)` : ""}</div>
+        </span> &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; ${build.nameLink(tech.tech[i].name)} ${tech.tech[i].count > 1 ? `(${tech.tech[i].count}/${tech.tech[i].maxCount})` : `(${tech.tech[i].maxCount})`}</div>
         ${tech.tech[i].descriptionFunction ? tech.tech[i].descriptionFunction() :tech.tech[i].description}</div>`
     },
     fieldTechText(i) {
@@ -501,12 +501,12 @@ ${simulation.isCheating ? "<br><br><em>lore disabled</em>": ""}
         <span style="position:relative;">
                 <div class="circle-grid tech" style="position:absolute; top:0; left:0;opacity:0.8;"></div>
                 <div class="circle-grid field" style="position:absolute; top:0; left:10px;opacity:0.65;"></div>
-        </span> &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; ${build.nameLink(tech.tech[i].name)} ${tech.tech[i].count > 1 ? `(${tech.tech[i].count}x)` : ""}</div>
+        </span> &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; ${build.nameLink(tech.tech[i].name)} ${tech.tech[i].count > 1 ? `(${tech.tech[i].count}/${tech.tech[i].maxCount})` : `(${tech.tech[i].maxCount})`}</div>
         ${tech.tech[i].descriptionFunction ? tech.tech[i].descriptionFunction() :tech.tech[i].description}</div>`
     },
     junkTechText(i) {
         return `<div class="card-text">
-        <div class="grid-title"><div class="circle-grid junk"></div> &nbsp; ${build.nameLink(tech.tech[i].name)} ${tech.tech[i].count > 1 ? `(${tech.tech[i].count}x)` : ""}</div>
+        <div class="grid-title"><div class="circle-grid junk"></div> &nbsp; ${build.nameLink(tech.tech[i].name)} ${tech.tech[i].count > 1 ? `(${tech.tech[i].count}/${tech.tech[i].maxCount})` : `(${tech.tech[i].maxCount})`}</div>
         ${tech.tech[i].descriptionFunction ? tech.tech[i].descriptionFunction() :tech.tech[i].description}</div>`
     },
     choosePowerUp(index, type, isAllowed = false) {
